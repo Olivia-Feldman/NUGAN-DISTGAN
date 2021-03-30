@@ -11,3 +11,13 @@ Lanczos Algorithm Video 1/2 - [link](https://www.youtube.com/watch?v=0t7WJybTmFg
 Lanczos Algorithm Video 1/2 - [link](https://www.youtube.com/watch?v=WO8w5zq1Sfo)
 
 Krylov subspaces video - [link](https://www.youtube.com/watch?v=ji__O4deIZo)
+
+## DIST-GAN
+
+DIST-GAN [repo](https://github.com/tntrung/gan/blob/master/distgan_image/distgan_mnist.py)
+
+## PyTorch
+
+PyTorch [datasets](https://pytorch.org/vision/stable/datasets.html): MNIST, CIFAR10, etc.
+
+## TensorFLow
