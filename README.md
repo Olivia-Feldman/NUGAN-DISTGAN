@@ -20,4 +20,8 @@ DIST-GAN [repo](https://github.com/tntrung/gan/blob/master/distgan_image/distgan
 
 PyTorch [datasets](https://pytorch.org/vision/stable/datasets.html): MNIST, CIFAR10, etc.
 
-## TensorFLow
+## TensorFlow
+
+## Mode Collapse
+
+How to Identify and Diagnose GAN [Failure Modes](https://machinelearningmastery.com/practical-guide-to-gan-failure-modes/)
