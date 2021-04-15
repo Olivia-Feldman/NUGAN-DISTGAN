@@ -12,6 +12,8 @@ Lanczos Algorithm [video](https://www.youtube.com/watch?v=WO8w5zq1Sfo) 2/2
 
 Krylov subspaces [video](https://www.youtube.com/watch?v=ji__O4deIZo)
 
+Lanczos Algorithm [code](https://github.com/cc-hpc-itwm/GradVis/blob/master/toolbox/hessian_functions.py)
+
 ## DIST-GAN
 
 DIST-GAN [repo](https://github.com/tntrung/gan/blob/master/distgan_image/distgan_mnist.py)
