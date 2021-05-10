@@ -1,3 +1,5 @@
+This repo consists of three different gan networks that are used to compare how the regular DGAN, DIST_GAN, and NU-GAN perform on preventing mode collapse. Each gan is run at latent dimensions 1 to visualize mode collpase in the model and then run at latent dimension 100 to determine the quality and diversity of images. An inception score metric is used to determine the quality and diversity of images for each three gans at their latent dimensions
+
 # Classifier
 
 A cnn digit classifier was trained and used in both networks to predic p(y|x) for the inception score for the gan. 
