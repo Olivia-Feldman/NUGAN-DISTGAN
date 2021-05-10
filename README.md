@@ -1,3 +1,8 @@
+# Classifier
+
+A cnn digit classifier was trained and used in both networks to predic p(y|x) for the inception score for the gan. 
+
+
 # NUGAN-DISTGAN
 
 ## Lanczos Algorithm
@@ -15,6 +20,10 @@ Krylov subspaces [video](https://www.youtube.com/watch?v=ji__O4deIZo)
 Lanczos Algorithm [code](https://github.com/cc-hpc-itwm/GradVis/blob/master/toolbox/hessian_functions.py)
 
 ## DIST-GAN
+
+The Dist-GAN introduces two novel constraints that works towards preventing mode collapse. The Dist-GAN network consists of autoencoder, generator and discriminator that are trained with the novel constraints. 
+
+A sigmoid loss function was created to returns a sigmoid loss logits probability. This is used for the discriminator loss. 
 
 DIST-GAN [repo](https://github.com/tntrung/gan/blob/master/distgan_image/distgan_mnist.py)
 
