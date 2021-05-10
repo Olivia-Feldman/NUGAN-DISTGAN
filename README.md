@@ -31,7 +31,7 @@ DIST-GAN [repo](https://github.com/tntrung/gan/blob/master/distgan_image/distgan
 
 PyTorch [datasets](https://pytorch.org/vision/stable/datasets.html): MNIST, CIFAR10, etc.
 
-## TensorFlow
+
 
 ## Mode Collapse
 
