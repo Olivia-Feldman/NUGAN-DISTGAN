@@ -5,7 +5,10 @@ This repo consists of three different GANs that are used to compare how a regula
 A CNN digit classifier was trained and implemented in all networks to find p(y|x) for the inception scores. 
 
 ## Inception Score
-The Inception Score, or IS for short, is an objective metric for evaluating the quality of generated images, specifically synthetic images output by generative adversarial network models. It was developed to remove the subjective human evaluation of images.
+The Inception Score, or IS for short, is an objective metric for evaluating the quality of generated images, specifically synthetic images output by generative adversarial network models. It was developed to remove the subjective human evaluation of images. The score seeks to capture two properties of a collection of generated images:
+1) Image Quality. Do images look like a specific object?
+2) Image Diversity. Is a wide range of objects generated?
+
 [More on Inception Scores](https://machinelearningmastery.com/how-to-implement-the-inception-score-from-scratch-for-evaluating-generated-images/)
 
 ## NUGAN-DISTGAN
