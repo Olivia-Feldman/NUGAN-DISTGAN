@@ -33,12 +33,11 @@ The Dist-GAN introduces two novel constraints that work towards preventing mode 
 
 A sigmoid loss function was created to return a sigmoid loss logits probability. This is used for the discriminator loss. 
 
-DIST-GAN [repo](https://github.com/tntrung/gan/blob/master/distgan_image/distgan_mnist.py)
+[DIST-GAN repo](https://github.com/tntrung/gan/blob/master/distgan_image/distgan_mnist.py)
 
 ## PyTorch
 
-PyTorch [datasets](https://pytorch.org/vision/stable/datasets.html): MNIST, CIFAR10, etc.
-
+[PyTorch datasets](https://pytorch.org/vision/stable/datasets.html): MNIST, CIFAR10, etc.
 
 
 ## Mode Collapse
