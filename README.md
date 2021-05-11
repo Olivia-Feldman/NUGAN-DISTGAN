@@ -1,8 +1,8 @@
-This repo consists of three different GANs that are used to compare how a regular GAN, DIST-GAN, and NU-GAN perform when it comes to preventing mode collapse. Each GAN is run at latent dimensions 1 to visualize mode collpase in the model. Then, the models are run at latent dimension 10 to visualize the generation of images wihtout mode collapse. An inception score metric is used to determine the quality and diversity of images for each GAN at the specified latent dimensions.
+This repo consists of three different GANs that are used to compare how a regular GAN, DIST-GAN, and NU-GAN perform when it comes to preventing mode collapse. Each GAN is run with 1 latent dimension to visualize mode collapse in the model. Then, the models are run with 10 latent dimensions to visualize the generation of images wihtout mode collapse. An inception score metric is calculated at each epoch to determine the quality and diversity of images for each GAN at the specified latent dimensions.
 
 # Classifier
 
-A cnn digit classifier was trained and used in both networks to predic p(y|x) for the inception score for the gan. 
+A CNN digit classifier was trained and implemented in all networks to find p(y|x) for the inception scores. 
 
 
 # NUGAN-DISTGAN
