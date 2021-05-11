@@ -1,11 +1,14 @@
 This repo consists of three different GANs that are used to compare how a regular GAN, DIST-GAN, and NU-GAN perform when it comes to preventing mode collapse. Each GAN is run with 1 latent dimension to visualize mode collapse in the model. Then, the models are run with 10 latent dimensions to visualize the generation of images wihtout mode collapse. An inception score metric is calculated at each epoch to determine the quality and diversity of images for each GAN at the specified latent dimensions.
 
-# Classifier
+## Classifier
 
 A CNN digit classifier was trained and implemented in all networks to find p(y|x) for the inception scores. 
 
+## Inception Score
+The Inception Score, or IS for short, is an objective metric for evaluating the quality of generated images, specifically synthetic images output by generative adversarial network models. It was developed to remove the subjective human evaluation of images.
+[More on Inception Scores](https://machinelearningmastery.com/how-to-implement-the-inception-score-from-scratch-for-evaluating-generated-images/)
 
-# NUGAN-DISTGAN
+## NUGAN-DISTGAN
 
 ## Lanczos Algorithm
 
