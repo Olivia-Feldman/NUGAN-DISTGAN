@@ -23,9 +23,9 @@ Lanczos Algorithm [code](https://github.com/cc-hpc-itwm/GradVis/blob/master/tool
 
 ## DIST-GAN
 
-The Dist-GAN introduces two novel constraints that works towards preventing mode collapse. The Dist-GAN network consists of autoencoder, generator and discriminator that are trained with the novel constraints. 
+The Dist-GAN introduces two novel constraints that work towards preventing mode collapse. The Dist-GAN network consists of an autoencoder, a generator, and a discriminator that are trained with the novel constraints. 
 
-A sigmoid loss function was created to returns a sigmoid loss logits probability. This is used for the discriminator loss. 
+A sigmoid loss function was created to return a sigmoid loss logits probability. This is used for the discriminator loss. 
 
 DIST-GAN [repo](https://github.com/tntrung/gan/blob/master/distgan_image/distgan_mnist.py)
 
