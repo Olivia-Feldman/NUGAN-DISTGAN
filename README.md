@@ -33,9 +33,9 @@ The Dist-GAN introduces the latent distance constriant and discriminator score c
 
 A sigmoid loss function was created to return a sigmoid loss logits probability. This is used for the discriminator loss and takes in the logits probaility and class labels to determine the sigmoid loss. 
 
-The latent distance constraint is used to regularize the auto-encoder to enforace a compatibility between the latent samples and data samples. 
+The latent distance constraint is used to regularize the auto-encoder to enforace a compatibility between the latent samples and data samples. A distance distribution metric is for the latent and data sample distributions.
 
-The discriminator score constraint is used to calculate the distance of distributions between the generator -discrciminator and latent-data samples and uses this along with a gradient penalty to determine the total D_loss from the discriminator. 
+The discriminator score constraint is used to calculate the distance of distributions between the generator -discrciminator along with a gradient penalty to determine the total D_loss from the discriminator. 
 
 
 [DIST-GAN repo](https://github.com/tntrung/gan/blob/master/distgan_image/distgan_mnist.py)
