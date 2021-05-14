@@ -11,7 +11,24 @@ The Inception Score, or IS for short, is an objective metric for evaluating the 
 
 [More on Inception Scores](https://machinelearningmastery.com/how-to-implement-the-inception-score-from-scratch-for-evaluating-generated-images/)
 
-## NUGAN-DISTGAN
+## DIST-GAN
+
+The Dist-GAN introduces the latent distance constriant and discriminator score constraint that work towards preventing mode collapse in the generator. The Dist-GAN network consists of an autoencoder, a generator, and a discriminator that are trained with these two novel constraints. The training contains three phases, 1) Training the encoder and generator with the latent distance constraint 2) training the discriminator with the discriminator score constraint, and 3) Training the generator a second time. 
+
+A sigmoid loss function was created to return a sigmoid loss logits probability. This is used for the discriminator loss and takes in the logits probaility and class labels to determine the sigmoid loss. 
+
+The latent distance constraint is used to regularize the auto-encoder to enforace a compatibility between the latent samples and data samples. A distance distribution metric is for the latent and data sample distributions.
+
+The discriminator score constraint is used to calculate the distance of distributions between the generator -discrciminator along with a gradient penalty to determine the total D_loss from the discriminator. 
+
+
+[DIST-GAN repo](https://github.com/tntrung/gan/blob/master/distgan_image/distgan_mnist.py)
+
+## NuGAN+DIST-GAN
+
+The combined NuGAN+DIST-GAN model has the same architecture as DIST-GAN but also implements a modified nudged-Adam optimizer. This modified optimizer calculates the hessian of the loss function of either the generator or discriminator. The top-k eigenvalues of this hessian matrix can then be calculated. If any of these top-k eigenvalues are above a certain threshold, then that is a signal for possible mode collapse. In our NuGAN+DISTGAN.ipynb file, we used a threshold of 500 to determine if an eigenvalue was signaling mode collapse. Once you know which eigenvalues pass that threshold, you can remove the gradient information for the weight parameter that corresponds to that eigenvalue.
+
+The [NuGAN paper](https://arxiv.org/pdf/2012.09673.pdf) that we utilized to implement this nudged-Adam also needed an efficient way to compute the eigenvalues of the Hessian because most typical neural networks have millions of parameters. Trying to calculate the eigenvalues of a Hessian by normal means would be infeasible. To circumvent this issue, the researchers used the Lanczos algorithm, which allowed them to compute the eigenvalues of the Hessian without having to calculate and store the Hessian itself.
 
 ## Lanczos Algorithm
 
@@ -26,19 +43,6 @@ Lanczos Algorithm [video](https://www.youtube.com/watch?v=WO8w5zq1Sfo) 2/2
 Krylov subspaces [video](https://www.youtube.com/watch?v=ji__O4deIZo)
 
 Lanczos Algorithm [code](https://github.com/cc-hpc-itwm/GradVis/blob/master/toolbox/hessian_functions.py)
-
-## DIST-GAN
-
-The Dist-GAN introduces the latent distance constriant and discriminator score constraint that work towards preventing mode collapse in the generator. The Dist-GAN network consists of an autoencoder, a generator, and a discriminator that are trained with these two novel constraints. The training contains three phases, 1) Training the encoder and generator with the latent distance constraint 2) training the discriminator with the discriminator score constraint, and 3) Training the generator a second time. 
-
-A sigmoid loss function was created to return a sigmoid loss logits probability. This is used for the discriminator loss and takes in the logits probaility and class labels to determine the sigmoid loss. 
-
-The latent distance constraint is used to regularize the auto-encoder to enforace a compatibility between the latent samples and data samples. A distance distribution metric is for the latent and data sample distributions.
-
-The discriminator score constraint is used to calculate the distance of distributions between the generator -discrciminator along with a gradient penalty to determine the total D_loss from the discriminator. 
-
-
-[DIST-GAN repo](https://github.com/tntrung/gan/blob/master/distgan_image/distgan_mnist.py)
 
 ## PyTorch
 
