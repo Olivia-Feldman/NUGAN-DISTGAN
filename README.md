@@ -13,13 +13,13 @@ The Inception Score, or IS for short, is an objective metric for evaluating the 
 
 ## DIST-GAN
 
-The Dist-GAN introduces the latent distance constriant and discriminator score constraint that work towards preventing mode collapse in the generator. The Dist-GAN network consists of an autoencoder, a generator, and a discriminator that are trained with these two novel constraints. The training contains three phases, 1) Training the encoder and generator with the latent distance constraint 2) training the discriminator with the discriminator score constraint, and 3) Training the generator a second time. 
+Dist-GAN introduces the latent distance constraint and discriminator score constraint that work towards preventing mode collapse. The Dist-GAN network consists of an autoencoder, a generator, and a discriminator that are trained with these two novel constraints. The training contains three phases, 1) Training the encoder and generator with the latent distance constraint, 2) training the discriminator with the discriminator score constraint, and 3) Training the generator a second time. 
 
-A sigmoid loss function was created to return a sigmoid loss logits probability. This is used for the discriminator loss and takes in the logits probaility and class labels to determine the sigmoid loss. 
+A sigmoid loss function was developed to return a sigmoid loss logits probability. This is used to calculate the discriminator loss and takes in the logits probability and class labels to determine the sigmoid loss. 
 
-The latent distance constraint is used to regularize the auto-encoder to enforace a compatibility between the latent samples and data samples. A distance distribution metric is for the latent and data sample distributions.
+The latent distance constraint is used to regularize the auto-encoder and enforce compatibility between the latent samples and data samples. A distance distribution metric is for the latent and data sample distributions.
 
-The discriminator score constraint is used to calculate the distance of distributions between the generator -discrciminator along with a gradient penalty to determine the total D_loss from the discriminator. 
+The discriminator score constraint is used to calculate the distance of distributions between the generator and discriminator, along with a gradient penalty to determine the total D_loss from the discriminator. 
 
 
 [DIST-GAN repo](https://github.com/tntrung/gan/blob/master/distgan_image/distgan_mnist.py)
