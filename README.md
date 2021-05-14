@@ -1,4 +1,6 @@
-This repo consists of three different GANs that are used to compare how a regular GAN, DIST-GAN, and NU-GAN perform when it comes to preventing mode collapse. Each GAN is run with 1 latent dimension to visualize mode collapse in the model. Then, the models are run with 10 latent dimensions to visualize the generation of images wihtout mode collapse. An inception score metric is calculated at each epoch to determine the quality and diversity of images for each GAN at the specified latent dimensions.
+This repo consists of three different GANs that are used to compare how a regular GAN, DIST-GAN, and NU-GAN perform when it comes to preventing mode collapse. Each GAN is run with 1 latent dimension to visualize mode collapse in the model. Then, the models are run with 10 latent dimensions to visualize the generation of images wihtout mode collapse. An inception score metric is calculated at each epoch to determine the quality and diversity of images for each GAN at the specified latent dimensions. Each of the three different GAN architectures use the MNIST dataset for training and testing. Each of the three models can be found on the main branch. Simply open up of ipython notebook file and run the model using Google Colab's GPU's.
+
+Each model utilizes: PyTorch, Numpy, and Matplotlib
 
 ## Classifier
 
